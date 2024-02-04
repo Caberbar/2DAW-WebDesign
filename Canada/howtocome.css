@@ -1,0 +1,777 @@
+p {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --grey: #f1f1f1;
+    --white: #ffffff;
+    --black: #000000;
+    --red: #d00000;
+    --red-title: #e60013;
+    --greyLight: #484A46;
+}
+
+/*--------------------------- HEADER ---------------------------------------*/
+
+header {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-image: url("Fotos/HowToCome/Header.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*--------------------------- NAV ---------------------------*/
+
+.nav-list li {
+    flex: 0 1 250px;
+}
+
+.BigName {
+    text-transform: uppercase;
+    color: var(--white);
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 1rem + 3.333vw, 5rem);
+    text-shadow: 3px 3px 20px var(--black);
+}
+
+/*--------------------------- INTRO ---------------------------------------*/
+
+
+.intro {
+    margin-top: 5rem;
+}
+
+.introContain h2 {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 600;
+    font-size: clamp(2rem, 1.667rem + 1.111vw, 3rem);
+    color: var(--red-title);
+}
+
+.introText {
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+}
+
+.introText p {
+    flex: 1;
+    font-weight: 600;
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+}
+
+/*--------------------------- TRANSPORTS ---------------------------------------*/
+/*--------------------------- PLANE ---------------------------------------*/
+
+.transoports {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 5rem;
+}
+
+.PlaneContainer {
+    margin-top: 5rem;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.PlaneContainer1 {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 3rem;
+}
+
+.PlaneText {
+    /* border: 1px solid fuchsia; */
+    flex: 1;
+}
+
+.PlaneText h2,
+.PlaneContainer2 h2 {
+    color: var(--red);
+    margin-bottom: 1rem;
+    font-weight: lighter;
+    font-size: clamp(1rem, 0.833rem + 0.556vw, 1.5rem);
+}
+
+.PlaneText h3 {
+    color: var(--greyLight);
+    font-size: clamp(1.5rem, 1.433rem + 0.222vw, 1.7rem);
+}
+
+.PlaneText p,
+.PlaneContainer2 p {
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+}
+
+
+.PlaneIMG {
+    /* border: 1px solid greenyellow; */
+    flex: 1;
+    background-image: url("Fotos/HowToCome/plane.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.PlaneContainer2 {
+    margin-top: 2rem;
+}
+
+.PlaneContainer2 .PlaneText {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.PlaneContainerSVG {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PlaneContainerSVG img {
+    /* border: 1px solid green; */
+    width: 200px;
+}
+
+/*--------------------------- BOAT ---------------------------------------*/
+
+.BoatContainer {
+    margin-top: 5rem;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.BoatContainer1 {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 3rem;
+}
+
+.BoatText {
+    /* border: 1px solid fuchsia; */
+    flex: 1;
+}
+
+.BoatText h2,
+.BoatContainer2 h2 {
+    color: var(--red);
+    font-weight: lighter;
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 0.833rem + 0.556vw, 1.5rem);
+}
+
+.BoatText h3 {
+    color: var(--greyLight);
+    font-size: clamp(1.5rem, 1.433rem + 0.222vw, 1.7rem);
+}
+
+.BoatText p,
+.BoatContainer2 p {
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+}
+
+
+.BoatIMG {
+    /* border: 1px solid greenyellow; */
+    flex: 1;
+    background-image: url("Fotos/HowToCome/boat.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.BoatContainer2 {
+    margin-top: 2rem;
+}
+
+.BoatContainer2 .BoatText {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.BoatContainer2 .BoatText p {
+    flex: 1;
+}
+
+.BoatContainerSVG {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BoatContainerSVG img {
+    /* border: 1px solid green; */
+    width: 100px;
+}
+
+/*--------------------------- ROAD ---------------------------------------*/
+.RoadIMG {
+    /* border: 1px solid greenyellow; */
+    flex: 1;
+    background-image: url("Fotos/HowToCome/carretera-curvas-paisaje-montana.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.RoadContainerSVG {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RoadContainerSVG img {
+    /* border: 1px solid green; */
+    width: 250px;
+}
+
+/*--------------------------- OTHERS TRANSPORT ---------------------------------------*/
+
+.OtherContainer {
+    margin-top: 3rem;
+}
+
+.OtherContain {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    gap: 3rem;
+}
+
+.otherText h2 {
+    color: var(--red);
+    font-weight: lighter;
+    font-size: clamp(1rem, 0.833rem + 0.556vw, 1.5rem);
+    margin-bottom: 10PX;
+}
+
+.otherText h3 {
+    color: var(--greyLight);
+    font-size: clamp(0.938rem, 0.729rem + 0.694vw, 1.563rem);
+}
+
+.busIMG img{
+    width: 95px;
+    height: 110px;
+}
+
+/*--------------------------- NEED TO TRAVEL ---------------------------------------*/
+
+.neddtotravel {
+    margin-top: 10rem;
+}
+
+.TravelText {
+    margin-bottom: 2rem;
+}
+
+.TravelText h2 {
+    color: var(--red);
+    font-weight: lighter;
+    font-size: clamp(1rem, 0.833rem + 0.556vw, 1.5rem);
+}
+
+.TravelText h3 {
+    color: var(--greyLight);
+    font-size: clamp(1.5rem, 1.433rem + 0.222vw, 1.7rem);
+}
+
+/*---------------------------*/
+
+.travel {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.travel-text {
+    flex: 1;
+}
+
+.travel-img {
+    flex: 0.5;
+}
+
+.travel-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.travel-text h3 {
+    color: var(--black);
+    font-size: clamp(0.938rem, 0.729rem + 0.694vw, 1.563rem);
+}
+
+.travel-text p {
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+}
+
+.travel1 {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 2rem;
+}
+
+.travel1 .travel-img img {
+    width: 200px;
+    height: 200px;
+}
+
+.travel2 {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 2rem;
+}
+
+.travel2 .travel-img img {
+    width: 200px;
+    height: 200px;
+}
+
+.travel3 {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.travel3 .travel-img img {
+    width: 150px;
+    height: 150px;
+}
+
+/*--------------------------- TIPS ---------------------------------------*/
+
+.second-section {
+    margin-top: 10rem;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.TipsContainer {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.TipsContainer .titulo {
+    flex: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: clamp(1rem, 0.667rem + 1.111vw, 2rem);
+    /* border: 1px solid green; */
+}
+
+/*---------------------------*/
+.line,
+.carousel,
+.carousel li,
+.carousel li p {
+    width: 100%;
+}
+
+.flex,
+.center,
+.carousel ul,
+.carousel-wrapper {
+    display: flex;
+}
+
+.center,
+.carousel ul {
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 50px;
+}
+
+.carousel-wrapper input {
+    display: none;
+}
+
+.carousel {
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.carousel ul {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 500%;
+    transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.carousel li {
+    text-align: center;
+}
+
+.nav-dot {
+    position: absolute;
+    cursor: pointer;
+    margin-left: -7.5px;
+    bottom: -22.5px;
+    width: 15px;
+    height: 15px;
+    opacity: 0.5;
+    background-color: black;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.nav-dot:hover {
+    opacity: 0.8;
+    transform: scale(1.2);
+}
+
+.nav-dot:active {
+    transform: scale(0.9);
+}
+
+.nav-dot[for=slide1] {
+    left: 40%;
+}
+
+#slide1:checked~.carousel ul {
+    left: 0%;
+}
+
+#slide1:checked~.nav-dot[for=slide1] {
+    opacity: 1;
+}
+
+.nav-dot[for=slide2] {
+    left: 45%;
+}
+
+#slide2:checked~.carousel ul {
+    left: -100%;
+}
+
+#slide2:checked~.nav-dot[for=slide2] {
+    opacity: 1;
+}
+
+.nav-dot[for=slide3] {
+    left: 50%;
+}
+
+#slide3:checked~.carousel ul {
+    left: -200%;
+}
+
+#slide3:checked~.nav-dot[for=slide3] {
+    opacity: 1;
+}
+
+.nav-dot[for=slide4] {
+    left: 55%;
+}
+
+#slide4:checked~.carousel ul {
+    left: -300%;
+}
+
+#slide4:checked~.nav-dot[for=slide4] {
+    opacity: 1;
+}
+
+.nav-dot[for=slide5] {
+    left: 60%;
+}
+
+#slide5:checked~.carousel ul {
+    left: -400%;
+}
+
+#slide5:checked~.nav-dot[for=slide5] {
+    opacity: 1;
+}
+
+.carousel-content {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 3rem;
+}
+
+.carousel-text {
+    flex: 1;
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+}
+
+.carousel-img {
+    flex: 0.2;
+}
+
+.carousel-img img {
+    filter: invert(24%) sepia(98%) saturate(7465%) hue-rotate(349deg) brightness(92%) contrast(105%);
+    width: 70px;
+    height: 70px;
+}
+
+/*--------------------------- HOTELS ---------------------------------------*/
+
+.hotels {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 10rem;
+}
+
+.hotels .titulo {
+    flex: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: clamp(1rem, 0.667rem + 1.111vw, 2rem);
+    /* border: 1px solid green; */
+}
+
+.hotelsContainer {
+    margin-top: 5rem;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.Hotel1,
+.Hotel2,
+.Hotel3 {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 3rem;
+}
+
+.HotelText {
+    /* border: 1px solid fuchsia; */
+    flex: 1;
+}
+
+.HotelText h2 {
+    color: var(--red);
+    font-weight: lighter;
+    font-size: clamp(1rem, 0.833rem + 0.556vw, 1.5rem);
+    margin-bottom: 2rem;
+}
+
+.HotelText p {
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+    margin-bottom: 2rem;
+}
+
+.icons i {
+    color: var(--red-title);
+    margin-bottom: 1rem;
+    height: 20px;
+    width: 20px;
+}
+
+.icons span {
+    font-size: clamp(1rem, 0.933rem + 0.222vw, 1.2rem);
+    font-weight: 500;
+    margin-left: 1rem;
+}
+
+.Hotel1IMG {
+    /* border: 1px solid greenyellow; */
+    flex: 1;
+    background-image: url("Fotos/HowToCome/Hotel1.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.Hotel2IMG {
+    /* border: 1px solid greenyellow; */
+    flex: 1;
+    background-image: url("Fotos/HowToCome/Hotel2.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.Hotel3IMG {
+    /* border: 1px solid greenyellow; */
+    flex: 1;
+    background-image: url("Fotos/HowToCome/Hotel3.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.Hotel3 {
+    margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 1100px) {
+
+    /*BOTON TOP*/
+    /*HERO*/
+    .HeroName {
+        align-items: center;
+    }
+
+    /*PLANE*/
+    .PlaneContainer1 {
+
+        flex-flow: column nowrap;
+        gap: 1rem;
+    }
+
+    .PlaneIMG {
+        aspect-ratio: 3/2;
+    }
+
+    /*BOAT*/
+    .BoatContainer1 {
+        flex-flow: column nowrap;
+        gap: 1rem;
+    }
+
+
+    .BoatIMG {
+        order: 1;
+        aspect-ratio: 4/3;
+    }
+
+    /*ROAD*/
+    .RoadIMG {
+        aspect-ratio: 4/3;
+    }
+
+    /*Slider*/
+    .carousel-wrapper {
+        max-width: 800px;
+    }
+
+    .carousel-content {
+        gap: 1rem;
+        flex-flow: column nowrap
+    }
+
+    .second-section,.hotels {
+        margin-top: 5rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    /*INTRO*/
+    .introText {
+        flex-flow: column nowrap;
+    }
+
+    .travel1,
+    .travel2,
+    .travel3 {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+
+    /*HOTELS*/
+    .hotelsContainer{
+        margin-top: 2rem;
+    }
+
+    .Hotel1,
+    .Hotel2,
+    .Hotel3 {
+        flex-flow: column nowrap;
+        gap: 1rem;
+    }
+
+    .Hotel1IMG,.Hotel2IMG, .Hotel3IMG {
+        aspect-ratio: 4/2;
+    }
+
+    .Hotel2IMG{
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    /*OTHERS TRANSPORT*/
+    .OtherContain {
+        flex-flow: column nowrap;
+    }
+
+    /*Slider*/
+    .carousel-wrapper {
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+
+    /*Slider*/
+    .carousel-wrapper {
+        max-width: 550px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    /*Slider*/
+    .carousel-wrapper {
+        max-width: 450px;
+    }
+
+    .nav-dot[for=slide1] {
+        left: 30%;
+    }
+
+    .nav-dot[for=slide2] {
+        left: 40%;
+    }
+
+    .nav-dot[for=slide4] {
+        left: 60%;
+    }
+
+    .nav-dot[for=slide5] {
+        left: 70%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /*Slider*/
+    .carousel-wrapper {
+        max-width: 350px;
+    }
+}

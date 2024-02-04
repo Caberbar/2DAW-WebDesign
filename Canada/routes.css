@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --grey: #f1f1f1;
+    --white: #ffffff;
+    --black: #000000;
+    --red: #d00000;
+    --red-title: #e60013;
+    --greyLight: #484A46;
+}
+
+/*--------------------------- HEADER ---------------------------------------*/
+
+header {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-image: url("Fotos/Routes/Header.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*--------------------------- NAV ---------------------------*/
+
+.nav-list li {
+    flex: 0 1 200px;
+}
+
+.BigName {
+    text-transform: uppercase;
+    color: var(--white);
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 1rem + 3.333vw, 5rem);
+    text-shadow: 3px 3px 20px var(--black);
+}
+
+/*--------------------------- INTRO ---------------------------------------*/
+
+
+.intro {
+    margin-top: 5rem;
+}
+
+.introContain h2 {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 600;
+    font-size: clamp(2rem, 1.667rem + 1.111vw, 3rem);
+    color: var(--red-title);
+}
+
+.introText {
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+}
+
+.introText p {
+    flex: 1;
+    font-weight: 600;
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+}
+
+/*--------------------------- DESTINATION ---------------------------------------*/
+
+.InfoParksContainer {
+    margin-bottom: 3rem;
+}
+
+.fourth-section h3 {
+    color: var(--greyLight);
+    font-size: clamp(0.938rem, 0.729rem + 0.694vw, 1.563rem);
+}
+
+/*--------------------------- ACTIVITIES ---------------------------------------*/
+
+.activities-contain {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    gap: 2rem;
+}
+
+.activities1,
+.activities2 {
+    flex: 1;
+    gap: 2rem;
+    display: flex;
+    flex-direction: row nowrap;
+}
+
+.activities,
+.activities3,
+.activities4 {
+    flex: 1;
+    position: relative;
+}
+
+.activitieIMG {
+    flex: 1;
+    aspect-ratio: 3/4;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.activitie1 .activitieIMG {
+    background-image: url("Fotos/Routes/Destiantion1.jpg");
+}
+
+.activitie2 .activitieIMG {
+    background-image: url("Fotos/Routes/Destination2.jpg");
+}
+
+.activitie3 .activitieIMG {
+    background-image: url("Fotos/Routes/Destination3.jpg");
+}
+
+.activitie4 .activitieIMG {
+    background-image: url("Fotos/Routes/Destination4.jpg");
+}
+
+.activitieText {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    color: #ffffff;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.1s ease, transform 0.2s ease;
+}
+
+.activities:hover .activitieText {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.activitieText p {
+    margin: 0;
+    font-size: clamp(1rem, 0.667rem + 1.111vw, 2rem);
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 3px 3px 10px var(--black);
+}
+
+.activitieText a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.activitieText a:hover {
+    text-decoration: underline;
+}
+
+/*--------------------------- IMAGINE ---------------------------------------*/
+
+.first-section {
+    margin-top: 5rem;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.ImagineContainer {
+    /* border: 1px solid blue; */
+    margin-bottom: 3rem;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 4rem;
+}
+
+.ImagineText {
+    flex: 1;
+}
+
+.ImagineText h2 {
+    color: var(--red);
+    font-weight: lighter;
+    font-size: clamp(0.938rem, 0.833rem + 0.347vw, 1.25rem);
+}
+
+.ImagineText h3 {
+    color: var(--greyLight);
+    font-size: clamp(0.938rem, 0.729rem + 0.694vw, 1.563rem);
+}
+
+.ImagineText p {
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+}
+
+.ImaginePhoto {
+    flex: 1;
+    background-image: url("Fotos/Routes/create.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.ImagineButton {
+    margin-top: 1rem;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    /* border: 1px solid greenyellow; */
+}
+
+.ImagineButton a {
+    width: 150px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--black);
+    border: 1px solid var(--black);
+    font-size: clamp(1.375rem, 1.3606rem + 0.0641vw, 1.4375rem);
+    cursor: pointer;
+}
+
+.ImagineButton a:hover {
+    background-color: var(--black);
+    color: var(--white);
+    position: relative;
+    transition: 0.5s ease;
+}
+
+/*--------------------------- SERVICES ---------------------------------------*/
+
+.servicesContainer {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 2rem;
+}
+
+.services {
+    /* border: 1px solid blue; */
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.serviceH3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: clamp(1rem, 0.833rem + 0.556vw, 1.5rem);
+}
+
+.serviceP {
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+    font-weight: 400;
+}
+
+/*--------------------------- REVIEWS ---------------------------------------*/
+
+.reviews {
+    margin-top: 5rem;
+    margin-left: 0;
+    margin-right: 0;
+    /* border: 1px solid red; */
+}
+
+.reviewsBck {
+    height: 60vh;
+    background-image: url("Fotos/Routes/bg.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.reviewsContain {
+    flex: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.ContainerReviews1 {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-left: 0rem;
+    text-align: center;
+}
+
+.ContainerReviews1 h2 {
+    color: var(--red);
+    font-weight: lighter;
+    font-size: clamp(0.938rem, 0.833rem + 0.347vw, 1.25rem);
+}
+
+.ContainerReviews1 h3 {
+    color: var(--greyLight);
+    font-size: clamp(0.938rem, 0.729rem + 0.694vw, 1.563rem);
+}
+
+.reviewsSVGS {
+    /* border: 1px solid darkcyan; */
+    flex: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5rem;
+}
+
+.svg1 {
+    display: flex;
+    margin-left: 4rem;
+    flex-flow: column nowrap;
+}
+
+.svg1,
+.svg2 {
+    text-align: center;
+}
+
+.svg1 .svg img,
+.svg2 .svg img {
+    /* border: 1px solid red; */
+    flex: 1;
+    height: 100px;
+}
+
+.svg1 span,
+.svg2 span {
+    font-weight: bold;
+    font-size: clamp(1rem, 0.333rem + 2.222vw, 3rem);
+}
+
+.ContainerReviews2 {
+    flex: 1;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.testimonial {
+    flex: 1;
+    padding: 20px;
+    height: 300px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 10px 5px 20px black;
+}
+
+.testimonial-header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.testimonial-header img {
+    width: 100px;
+    height: 100px;
+}
+
+.testimonial p {
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+    margin-top: 1rem;
+}
+
+.fake-slider {
+    margin-top: 1rem;
+    height: 2vh;
+    width: 30%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.buttom-slider {
+    height: 4px;
+    width: 25px;
+    background-color: black;
+    cursor: pointer;
+}
+
+.a {
+    background-color: var(--red);
+}
+
+/*--------------------------- ROUTES ---------------------------*/
+
+/*--------------------------- Intro ---------------------------*/
+
+.routesIntro {
+    margin-top: 5rem;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.ImagineContainer {
+    /* border: 1px solid blue; */
+    margin-bottom: 3rem;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 4rem;
+}
+
+.RouteIntroPhoto {
+    flex: 1;
+    background-image: url("Fotos/Routes/RouteIntro.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.routeButton a {
+    width: 250px;
+}
+
+/*--------------------------- Route header ---------------------------*/
+
+.routes {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.routeIntro{
+    margin-top: 5rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.routeIntro .titulo{
+    flex: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: clamp(1rem, 0.667rem + 1.111vw, 2rem);
+}
+
+.RoutePhoto1 {
+    flex: 1;
+    background-image: url("Fotos/Routes/Route1.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.RoutePhoto2 {
+    flex: 1;
+    background-image: url("Fotos/Routes/Route2.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.RoutePhoto3 {
+    flex: 1;
+    background-image: url("Fotos/Routes/Route3.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.R1, .R2, .R3{
+    margin-top: 5rem;
+}
+
+.tourDayContainer {
+    flex: 1 1 100%;
+    display: flex;
+
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.date {
+    width: 100%;
+    height: 650px;
+    
+    overflow: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+
+.ro {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    transition: all 150ms linear;
+}
+
+.description h2 {
+    text-align: center;
+}
+
+.description p{
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+}
+
+.description {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    color: white;
+    flex:1;
+    padding: 50px;
+    width: 35%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.intinerario{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+}
+
+.hide {
+    flex: 0;
+    width: 0%;
+    opacity: 0;
+}
+
+.a1, .a2, .a3, .a4, .a5 {
+    flex: 1;
+    width: 100%;
+    opacity: 1;
+}
+
+.R11 {
+    background-image: url("Fotos/Routes/R1/R1D1.jpg");
+}
+.R12 {
+    background-image: url("Fotos/Routes/R1/R1D2.jpg");
+}
+.R13 {
+    background-image: url("Fotos/Routes/R1/R1D3.jpg");
+}
+.R14 {
+    background-image: url("Fotos/Routes/R1/R1D4.jpg");
+}
+.R15 {
+    background-image: url("Fotos/Routes/R1/R1D5.jpg");
+}
+
+.R21 {
+    background-image: url("Fotos/Routes/R2/R2D1.jpg");
+}
+.R22 {
+    background-image: url("Fotos/Routes/R2/R2D2.jpg");
+}
+.R23 {
+    background-image: url("Fotos/Routes/R2/R2D3.jpg");
+}
+.R24 {
+    background-image: url("Fotos/Routes/R2/R2D4.jpg");
+}
+.R25 {
+    background-image: url("Fotos/Routes/R2/R2D5.jpg");
+}
+
+.R31 {
+    background-image: url("Fotos/Routes/R3/R3D1.jpg");
+}
+.R32 {
+    background-image: url("Fotos/Routes/R3/R3D2.jpg");
+}
+.R33 {
+    background-image: url("Fotos/Routes/R3/R3D3.jpg");
+}
+.R34 {
+    background-image: url("Fotos/Routes/R3/R3D4.jpg");
+}
+.R35 {
+    background-image: url("Fotos/Routes/R3/R3D5.jpg");
+}
+
+.Buttons {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.dB {
+    padding: 10px 25px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.DayAct {
+    color: var(--red);
+}
+
+.dB:hover {
+    border-bottom: 0.5px solid black;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1100px) {
+
+    /*BOTON TOP*/
+    /*HERO*/
+    .HeroName {
+        align-items: center;
+    }
+
+    /*DESTINATION*/
+    .activities-contain {
+        flex-flow: column nowrap;
+        align-items: unset;
+    }
+
+    /*IMAGINE*/
+    .ImagineContainer {
+        flex-flow: column nowrap;
+    }
+
+    .ImaginePhoto,.RouteIntroPhoto,.RoutePhoto1,.RoutePhoto2,.RoutePhoto3{
+        aspect-ratio: 3/1.5;
+    }
+
+    /*REVIEWS*/
+    .reviewsContain {
+        flex-flow: column nowrap;
+    }
+
+    .reviewsBck {
+        height: 80vh;
+    }
+
+    .reviewsSVGS {
+        flex: 0;
+    }
+
+    .ContainerReviews2 {
+        margin-top: 1rem;
+    }
+
+    .svg1 {
+        margin-left: 0;
+    }
+
+    .testimonial {
+        height: 250px;
+        border-radius: 3px;
+        box-shadow: none;
+    }
+
+    /*ROUTES*/
+    .ro{
+        flex-direction: row;
+    }
+
+    .description{
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .servicesContainer {
+        flex-flow: column nowrap;
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .testimonial {
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 800px) {}
+
+@media screen and (max-width: 780px) {
+
+    /*Destination*/
+    .activities1,
+    .activities2 {
+        flex-flow: column nowrap;
+    }
+
+    .activitieIMG {
+        aspect-ratio: 1/1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .testimonial {
+        height: 350px;
+    }
+
+    .reviewsBck {
+        height: 125vh;
+    }
+
+    .fake-slider {
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .testimonial {
+        height: 400px;
+    }
+
+    .description p{
+        font-size: 1.15em;
+    }
+}

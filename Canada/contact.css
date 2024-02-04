@@ -1,0 +1,329 @@
+p {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --grey: #f1f1f1;
+    --white: #ffffff;
+    --black: #000000;
+    --red: #d00000;
+    --red-title: #e60013;
+    --greyLight: #484A46;
+}
+
+/*--------------------------- HEADER ---------------------------------------*/
+
+header {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-image: url("Fotos/Contact/Header.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* NAV */
+
+.nav-list li {
+    flex: 0 1 250px;
+}
+
+.BigName {
+    text-transform: uppercase;
+    color: var(--white);
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 1rem + 3.333vw, 5rem);
+    text-shadow: 3px 3px 20px var(--black);
+}
+
+/*--------------------------- INTRO ---------------------------------------*/
+
+
+.intro {
+    margin-top: 5rem;
+}
+
+.introContain h2 {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 600;
+    font-size: clamp(2rem, 1.667rem + 1.111vw, 3rem);
+    color: var(--red-title);
+}
+
+.introText {
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+}
+
+.introText p {
+    flex: 1;
+    font-weight: 600;
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+}
+
+/*--------------------------- OFFICES ---------------------------*/
+
+.OfficeContainer {
+    /* border: 1px solid blue; */
+    margin-bottom: 3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 4rem;
+}
+
+.OfficeText {
+    flex: 1;
+}
+
+.OfficeText h2 {
+    color: var(--red);
+    font-weight: lighter;
+    font-size: clamp(0.938rem, 0.833rem + 0.347vw, 1.25rem);
+}
+
+.OfficeText p {
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+}
+
+.OfficePhoto {
+    aspect-ratio: 3/4;
+    flex: 1;
+    background-image: url("Fotos/Home/History.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* --------------------------- */
+.etiqueta {
+    border-right: 20px solid var(--grey);
+}
+
+.etiqueta:last-child{
+    border-right: 0;
+}
+
+.etiquetaTexto{
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0.6;
+    gap: 1rem;
+}
+
+#etiquetaTexto1 {
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+#etiquetaTexto2 {
+    font-weight: 500;
+    font-size: clamp(1rem, 0.833rem + 0.556vw, 1.5rem);
+}
+
+.etiquetaContact a {
+    text-decoration: none;
+    font-size: clamp(0.5rem, 0.333rem + 0.556vw, 1rem);
+    text-transform: uppercase;
+    color: var(--black);
+    opacity: 80%;
+    margin-left: 1rem;
+}
+
+.etiquetaContact a:hover {
+    border-bottom: black solid 1px;
+}
+
+.etiqueta3 .etiquetaFoto {
+    background-image: url("Fotos/Contact/Of1.jpg");
+}
+
+
+.etiqueta4 .etiquetaFoto {
+    background-image: url("Fotos/Contact/Of2.jpg");
+}
+
+.etiqueta5 .etiquetaFoto {
+    background-image: url("Fotos/Contact/Of3.jpg");
+}
+
+/*--------------------------- MAP ---------------------------*/
+
+.mapa{
+    margin-top: 5rem;
+    display: flex;
+
+}
+
+/*--------------------------- CONTACT ---------------------------*/
+
+.contact h2{
+    color: var(--red);
+    font-weight: lighter;
+    font-size: clamp(1rem, 0.833rem + 0.556vw, 1.5rem);
+    margin-bottom: 2rem;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.texto-contact {
+    flex: 1 0 48%;
+    max-width: 600px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+    font-size: clamp(1rem, 0.9rem + 0.333vw, 1.3rem);
+    max-width: 100%;
+    max-height: 150px;
+    resize: none;
+}
+
+.contact-button {
+    color: var(--black);
+    padding: 10px;
+    transition: 0.5s ease;
+}
+
+.contact-button:hover,
+.contact-button:focus {
+    background-color: var(--white);
+    padding-left: 40px;
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Icons Outlined';
+    font-size: 24px;
+    margin-left: 8px;
+}
+
+.texto-contact .texto {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.texto-contact p {
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+}
+
+.contacto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contacto *{
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    align-items: center;
+    align-content: center;
+}
+
+.telefono,
+.mail,
+.location,
+.clock {
+    display: flex;
+    align-items: center;
+}
+
+.telefono i,
+.mail i,
+.location i,
+.clock i {
+    margin-right: 10px;
+}
+
+.telefono p,
+.mail p,
+.location p,
+.clock p {
+    font-size: 16px;
+    padding-bottom: 0;
+}
+
+/*--------------------------- FAQ ---------------------------*/
+.faq h2{
+    color: var(--red);
+    font-weight: lighter;
+    font-size: clamp(1rem, 0.833rem + 0.556vw, 1.5rem);
+    margin-bottom: 2rem;
+}
+
+.faq-container {
+    margin-bottom: 2rem;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-question {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.faq-answer {
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 1100px) {
+    /*HERO*/
+    .HeroName {
+        align-items: center;
+    }
+    .etiqueta {
+        border-right: 0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    /*INTRO*/
+    .introText {
+        flex-flow: column nowrap;
+    }
+}

@@ -1,0 +1,1554 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+
+
+:root {
+    --grey: #f1f1f1;
+    --white: #ffffff;
+    --black: #000000;
+    --red: #d00000;
+    --greyLight: #484A46;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    color: var(--black);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--grey);
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+.btn-scrolltop {
+    position: fixed;
+    z-index: 99999999999999;
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 10px;
+    background: var(--black);
+    opacity: 50%;
+    color: white;
+    border-radius: 20%;
+    cursor: pointer;
+    transform: translateY(100px);
+    transition: 0.3s;
+}
+
+.btn-scrolltop-on {
+    
+    transform: translateY(0);
+}
+
+.fa-solid .fa-chevron-up{
+    padding: 0;
+}
+
+/*--------------------------- MENU COLLAPSE ---------------------------------------*/
+
+.menu-toggle{
+    cursor: pointer;
+    display: none;
+    
+    
+    width: 40px;
+    height: 20px;
+}
+
+
+
+.bar{
+    background-color: var(--white);
+    width: 80%;
+    height: 3px;
+    transition: all 0.5s ease;
+}
+
+.bar.rotate45 {
+    transform: rotate(45deg) translate(0px , -9px);
+    height: 6px;
+} 
+
+.bar.rotate-45{
+    transform: rotate(-45deg) translate(0px , 10px);
+    height: 6px;
+}
+
+.bar.hide{
+    opacity: 0;
+}
+
+/*--------------------------- HEADER ---------------------------------------*/
+
+header {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-image: url("Fotos/Home/Header.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.HeroContainer {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+
+/* NAV */
+
+nav {
+    margin-top: 10px;
+    width: 90%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    height: 90px;
+    /* padding-left: 105px; */
+    flex: 0 0 90px;
+    background-image: url("Fotos/Logovectores/logo.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.nav-list {
+    /* border: 1px solid blue; */
+    flex: 0 1 900px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.nav-list li {
+    flex: 0 1 200px;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--white);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.4375rem, 1.4231rem + 0.0641vw, 1.5rem);
+    position: relative;
+}
+
+#actual{
+    color: #bdbdbd;
+}
+
+.nav-list li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; 
+    background-color: var(--white);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s;
+}
+
+.nav-list li a:hover::after {
+    transform: scaleX(1);
+}
+
+.HeroContent {
+    flex: 1;
+    width: 90%;
+    display: flex;
+    flex-flow: column nowrap;
+    /* border: 1px solid blue; */
+    align-items: center;
+}
+
+.HeroName {
+    flex: 3;
+    width: 100%;
+    /* border: 1px solid fuchsia; */
+    align-items: center;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+} 
+
+.BigName {
+    text-transform: uppercase;
+    color: var(--white);
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: clamp(3rem, 1.667rem + 4.444vw, 7rem);
+    text-shadow: 3px 3px 20px var(--black);
+}
+
+.HeroSlogan {
+    flex: 1;
+    width: 100%;
+    /* border: 1px solid pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slogan {
+    text-align: center;
+    opacity: 80%;
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: clamp(1.5rem, 1.333rem + 0.556vw, 2rem);}
+
+.HeroButton {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid greenyellow; */
+}
+
+.HeroButton a {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 1px;
+    font-size: clamp(1.5rem, 1.333rem + 0.556vw, 2rem);
+    cursor: pointer;
+}
+
+.HeroButton a:hover {
+    background-color: var(--grey);
+    color: var(--black);
+    position: relative;
+    transition: 0.5s ease;
+}
+
+.HeroArrow {
+    flex: 1;
+    width: 100%;
+    /* border: 1px solid orange; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HeroArrow i {
+    color: white;
+    font-size: clamp(2rem, 1.667rem + 1.111vw, 3rem);
+}
+
+/*--------------------------- 1º SECTION ---------------------------------------*/
+
+section {
+    /* border: 1px solid red; */
+    margin: 0 10rem 0 10rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.first-section {
+    margin-top: 5rem;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.HistoryContainer {
+    /* border: 1px solid blue; */
+    margin-bottom: 3rem;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 4rem;
+}
+
+.HistoryText {
+    flex: 1;
+}
+
+.HistoryText h2 {
+    color: var(--red);
+    font-weight: lighter;
+    font-size: clamp(0.938rem, 0.833rem + 0.347vw, 1.25rem);
+}
+
+.HistoryText h3 {
+    color: var(--greyLight);
+    font-size: clamp(1.5rem, 1.433rem + 0.222vw, 1.7rem);
+}
+
+.HistoryText p {
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+}
+
+.HistoryPhoto {
+    flex: 1;
+    background-image: url("Fotos/Home/History.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/**/
+
+.AboutContainer {
+    /* border: 1px solid blue; */
+    margin-bottom: 3rem;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 4rem;
+}
+
+.AboutPhoto {
+    flex: 1;
+    background-image: url("Fotos/Home/About.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.AboutText {
+    flex: 1;
+}
+
+.AboutText h2 {
+    color: var(--red);
+    font-weight: lighter;
+    font-size: clamp(0.938rem, 0.833rem + 0.347vw, 1.25rem);
+}
+
+.AboutText h3 {
+    color: var(--greyLight);
+    font-size: clamp(1.5rem, 1.433rem + 0.222vw, 1.7rem);
+}
+
+.AboutText p {
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+}
+
+.AboutNumbers {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.Number1 h2,
+.Number2 h2,
+.Number3 h2 {
+    font-size: clamp(1.25rem, 0.625rem + 2.083vw, 3.125rem);
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.Number1 p,
+.Number2 p,
+.Number3 p {
+    font-weight: 400;
+    font-size: clamp(1rem, 0.643rem + 0.952vw, 1.5rem);
+    margin: 0;
+    padding: 0;
+}
+
+/*--------------------------- 2º SECTION (MAIN PROVINCES) ---------------------------------------*/
+
+.second-section {
+    margin-top: 5rem;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.ProvincesContainer {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.ProvincesContainer .titulo {
+    flex: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: clamp(1rem, 0.667rem + 1.111vw, 2rem);
+    /* border: 1px solid green; */
+}
+
+.ProvincesContainer .titulo h1 {
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+.etiquetas {
+    display: flex;
+    flex-flow: column nowrap;
+    /* border: 1px solid yellow; */
+}
+
+.seccionEtiquetas1 {
+    /* border: 1px solid fuchsia; */
+    display: flex;
+    /* gap: 3rem; */
+    flex-flow: row nowrap;
+}
+
+.etiquetaInicio {
+    flex: 2;
+    /* border: 1px solid lawngreen; */
+}
+
+/* --------------------------- */
+.etiquetaInicio,
+.etiqueta {
+    border-right: 5px solid var(--grey);
+}
+
+.etiqueta {
+    flex: 1;
+    height: 600px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.etiquetaFoto {
+    /* border: 1px solid red; */
+    flex: 1;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: transform 0.3s ease;
+}
+
+.etiquetaFoto::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: transform 0.3s ease;
+}
+
+.etiqueta:hover .etiquetaFoto::before {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* --------------------------- */
+.etiquetaTexto {
+    /* border: 1px solid blue; */
+    flex: 1;
+    background-color: var(--white);
+    padding: 3rem 1rem 0 1rem;
+}
+
+/* --------------------------- */
+
+.etiquetaInicio .InicioFoto {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.etiquetaInicio .InicioFoto::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("Fotos/Home/Alberta.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: transform 0.3s ease;
+}
+
+.etiquetaInicio:hover .InicioFoto::before {
+    transform: scale(1.1);
+}
+
+.etiquetaInicio .InicioFoto,
+.etiquetaInicio .InicioFoto::before {
+    height: 600px;
+}
+
+.etiquetaInicio .InicioTexto {
+    position: absolute;
+    transform: translate(20px, -110px);
+    color: var(--white);
+}
+
+#inicioTexto1 {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+#inicioTexto2 {
+    font-weight: bold;
+    font-size: clamp(1rem, 0.667rem + 1.111vw, 2rem);
+}
+
+.etiqueta1 .etiquetaFoto {
+    background-image: url("Fotos/Home/British.webp");
+}
+
+#etiquetaTexto1 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#etiquetaTexto2 {
+    font-weight: bold;
+    font-size: clamp(1rem, 0.667rem + 1.111vw, 2rem);
+}
+
+#etiquetaTexto2Descp{
+    font-size: 1rem;
+}
+
+#etiquetaEnlace {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--black);
+    opacity: 80%;
+}
+
+#etiquetaEnlace:hover {
+    border-bottom: black solid 1px;
+}
+
+.etiqueta2 .etiquetaFoto {
+    background-image: url("Fotos/Home/Saskatchewan.webp");
+}
+
+.seccionEtiquetas2 {
+    display: flex;
+    flex-flow: row nowrap;
+    /* gap: 3rem; */
+    margin-top: 2rem;
+}
+
+.etiqueta3 .etiquetaFoto {
+    background-image: url("Fotos/Home/Manitoba.webp");
+}
+
+.etiqueta4 .etiquetaFoto {
+    background-image: url("Fotos/Home/New_Brunswick.webp");
+}
+
+.etiqueta5 .etiquetaFoto {
+    background-image: url("Fotos/Home/Northwest_Territories.webp");
+}
+
+.etiqueta6 .etiquetaFoto {
+    background-image: url("Fotos/Home/Yukon.webp");
+}
+
+
+/*--------------------------- 3º SECTION (DESCRIPTION PROVINCES) ---------------------------------------*/
+
+.third-section {
+    /* border: 1px solid red; */
+    margin-top: 5rem;
+}
+
+.third-section h2 {
+    color: var(--red);
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: clamp(0.938rem, 0.833rem + 0.347vw, 1.25rem);
+    margin-bottom: 2rem;
+}
+
+.InfoProvincesContainer {
+    /* border: 1px solid blue; */
+
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+.firstP {
+    /* border: 1px solid fuchsia; */
+    flex: 1;
+    margin-right: 3rem;
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+}
+
+.firstP p {
+    margin: 0;
+}
+
+.secondP {
+    /* border: 1px solid lawngreen; */
+    flex: 1;
+    font-size: clamp(1.3rem, 1.233rem + 0.222vw, 1.5rem);
+}
+
+.thirdP {
+    /* border: 1px solid pink; */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.thirdP img {
+    width: 250px;
+}
+
+/*--------------------------- SEPARADOR ---------------------------------------*/
+
+.separador {
+    margin-top: 5rem;
+}
+
+.separadorContainer {
+    position: relative;
+    background-image: url("Fotos/Home/Separador.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 392px;
+}
+
+.separadorContainer p {
+    text-align: center;
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-shadow: 3px 3px 20px var(--black);
+    font-size: clamp(1.5rem, 1rem + 1.667vw, 3rem);
+}
+
+.SeparadorButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SeparadorButton a {
+    width: 200px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 3px;
+    font-size: clamp(1.375rem, 1.3606rem + 0.0641vw, 1.4375rem);
+    cursor: pointer;
+    text-shadow: 3px 3px 20px var(--black);
+}
+
+.SeparadorButton a:hover {
+    background-color: var(--grey);
+    color: var(--black);
+    position: relative;
+    text-shadow: none;
+    transition: 0.5s ease;
+}
+
+/*--------------------------- 4º SECTION (NATIONAL PARKS) ---------------------------------------*/
+
+.fourth-section {
+    /* border: 1px solid red; */
+    margin-top: 5rem;
+}
+
+.fourth-section h2 {
+    color: var(--red);
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: clamp(0.938rem, 0.833rem + 0.347vw, 1.25rem);
+    margin-bottom: 2rem;
+}
+
+.InfoParksContainer {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+/*--------------------------- 5º SECTION (NATIONAL PARKS) ---------------------------------------*/
+
+.etiquetaFoto2 {
+    /* border: 1px solid red; */
+    flex: 1;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: transform 0.3s ease;
+}
+
+.etiquetaFoto2::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: transform 0.3s ease;
+}
+
+.etiqueta:hover .etiquetaFoto2::before {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* --------------------------- */
+
+
+.etiquetaInicio .InicioFoto2 {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.etiquetaInicio .InicioFoto2::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("Fotos/Home/Jasper.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: transform 0.3s ease;
+}
+
+.etiquetaInicio:hover .InicioFoto2::before {
+    transform: scale(1.1);
+}
+
+.etiquetaInicio .InicioFoto2,
+.etiquetaInicio .InicioFoto2::before {
+    height: 600px;
+}
+
+.etiqueta1 .etiquetaFoto2 {
+    background-image: url("Fotos/Home/Forillon.webp");
+}
+
+.etiqueta2 .etiquetaFoto2 {
+    background-image: url("Fotos/Home/Fundy.webp");
+}
+
+.etiqueta3 .etiquetaFoto2 {
+    background-image: url("Fotos/Home/Gross.webp");
+}
+
+.etiqueta4 .etiquetaFoto2 {
+    background-image: url("Fotos/Home/Nahani.webp");
+}
+
+.etiqueta5 .etiquetaFoto2 {
+    background-image: url("Fotos/Home/St_Lawrence.webp");
+}
+
+.etiqueta6 .etiquetaFoto2 {
+    background-image: url("Fotos/Home/Waterton.webp");
+}
+
+/*--------------------------- 6º SECTION (CITIES) ---------------------------------------*/
+
+.Cities {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.InfoCitiesContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Cities .titulo {
+    flex: 1;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: clamp(1rem, 0.667rem + 1.111vw, 2rem);
+    /* border: 1px solid green; */
+}
+
+.Cities .titulo h1 {
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+figure {
+    margin: 0;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    flex: 0 0 50%;
+}
+
+figure img {
+    width: 100%;
+    height: 630px;
+    object-fit: cover;
+    object-position: center center;
+
+    display: block;
+}
+
+figcaption {
+    position: absolute;
+    z-index: 999999;
+    padding-bottom: 3rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: all 200ms ease-in-out;
+}
+
+figcaption p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: clamp(1.5rem, 1rem + 1.667vw, 3rem);
+    text-shadow: 3px 3px 10px var(--black);
+    color: var(--white);
+}
+
+figure:hover figcaption {
+    transform: translateY(0);
+}
+
+/*--------------------------- 7º SECTION (CAPITAL) ---------------------------------------*/
+.seventh-section {
+    /* border: 1px solid red; */
+    margin-top: 5rem;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.seventh-section h2 {
+    color: var(--red);
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: clamp(0.938rem, 0.833rem + 0.347vw, 1.25rem);
+    margin-bottom: 2rem;
+}
+
+.InfoCapitalContainer {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.capital {
+    margin-top: 5rem;
+}
+
+.capitalImg {
+    background-image: url("Fotos/Home/Otawa.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 622px;
+}
+
+/*--------------------------- 7º SECTION (NEWSLETTER) ---------------------------------------*/
+.NewsLetter {
+    margin-top: 3rem;
+}
+
+.NewsLetterContainer {
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 3rem;
+}
+
+.NewsLetterTittle {
+    text-align: right;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 0.833rem + 2.222vw, 3.5rem);
+    flex: 1;
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 40px;
+}
+
+.NewsLetterTittle p {
+    margin: 0;
+}
+
+.NewsLetterForm {
+    flex: 2;
+    margin-left: 10rem;
+}
+
+.NewsLetterForm p {
+    margin: 0;
+}
+
+.NewsLetterForm .subscribe-form {
+    display: flex;
+}
+
+.NewsLetterForm input[type=email] {
+    width: 60%;
+    padding: 10px;
+    font-size: clamp(0.8rem, 0.733rem + 0.222vw, 1rem);
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+}
+
+.NewsLetterForm input[type=submit] {
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-transform: uppercase;
+    font-size: clamp(0.8rem, 0.633rem + 0.556vw, 1.3rem);
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--black);
+    background-color: transparent;
+}
+
+.input-btn {
+    width: 15%;
+}
+
+
+.NewsLetterForm .input-btn {
+    padding: 0;
+    border: 0;
+    background: rgba(255, 255, 255, .9);
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    transition: 200ms ease;
+}
+
+.NewsLetterForm .input-btn:hover {
+    background: var(--greyLight);
+}
+
+.NewsLetterForm p {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, .9);
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.5rem, 1.4rem + 0.333vw, 1.8rem);
+}
+
+/*--------------------------- 8º SECTION (FOOTER) ---------------------------------------*/
+
+footer {
+    background-color: #494949;
+}
+
+.footerContain {
+    display: flex;
+    box-sizing: border-box;
+    padding: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.row1 {
+    margin-top: 3rem;
+    flex: 1;
+    width: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.item1 {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.logoFooter a {
+    display: inline-block;
+    background-image: url("Fotos/Logovectores/logo.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 70px;
+    height: 70px;
+    margin: 0;
+}
+
+.item1 .logoFooter p {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: clamp(0.8rem, 0.233rem + 1.889vw, 2.5rem);
+}
+
+.item1 .slogan p {
+    color: var(--white);
+    opacity: 100%;
+    font-size: clamp(0.8rem, 0.633rem + 0.556vw, 1.3rem);
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.social-media {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 2rem;
+}
+
+.social-media i {
+    font-size: 25px;
+}
+
+.social-media a {
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: var(--red);
+}
+
+/**/
+
+.item2 {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+.item2 p {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: clamp(0.8rem, 0.567rem + 0.778vw, 1.5rem);
+}
+
+.item2 p .navigation-text {
+    border-bottom: 1px solid var(--white);
+}
+
+.item2 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.item2 li {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: clamp(0.8rem, 0.667rem + 0.444vw, 1.2rem);
+}
+
+.item2 a {
+    text-decoration: none;
+    color: var(--white);
+    border-bottom: 1px solid transparent;
+    transition: 0.5s ease;
+}
+
+.item2 a:hover {
+    border-bottom: 1px solid var(--white);
+}
+
+/**/
+
+.item3 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.item3 p {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: clamp(0.8rem, 0.567rem + 0.778vw, 1.5rem);
+}
+
+.item3 p .contact-text {
+    border-bottom: 1px solid var(--white);
+}
+
+.item3 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.item3 li {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: clamp(0.8rem, 0.667rem + 0.444vw, 1.2rem);
+}
+
+.item3 a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--white);
+    border-bottom: 1px solid transparent;
+    transition: 0.5s ease;
+}
+
+/**/
+
+.row2 {
+    margin-top: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    font-size: clamp(0.8rem, 0.633rem + 0.556vw, 1.3rem);
+}
+
+/**/
+
+@media screen and (max-width: 1830px) {
+    section {
+        margin: 0 15rem 0 15rem;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1750px) {
+    section {
+        margin: 0 10rem 0 10rem;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    section {
+        margin: 0 8rem 0 8rem;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    section {
+        margin: 0 3rem 0 3rem;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+/*BOTON TOP*/
+   /*HERO*/
+    .menu-toggle {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+    
+    .nav-list{
+        display: none;
+        flex-flow: column nowrap;
+        background-color: rgba(0, 0, 0, 0.95);
+        text-align: center;
+        position: absolute;    
+        top: 13vh;
+        right: 0;
+        width: 100%;
+        
+    }
+    
+    .nav-list li{
+        flex: 0 0 0;
+        padding: 10px 0 10px 0;
+    }
+    
+    .show{
+        display: flex;
+        height: 280px;
+        animation: fade-in 1000ms;
+        animation-fill-mode: forwards;
+    }
+
+    /*FIRST SECTION*/
+    .HistoryContainer {
+        flex-flow: column nowrap;
+        gap: 1rem;
+
+    }
+
+    .HistoryPhoto {
+        padding-bottom: 60%;
+    }
+
+    .AboutContainer {
+        flex-flow: column nowrap;
+        gap: 1rem;
+    }
+
+    .AboutPhoto {
+        order: 2;
+        padding-bottom: 60%;
+    }
+
+    .AboutNumbers {
+        order: 1;
+        justify-content: space-between;
+    }
+
+    /*SECOND SECTION*/
+
+    .seccionEtiquetas1 {
+        flex-flow: column nowrap;
+    }
+
+    .etiquetaInicio {
+        flex: 1;
+    }
+
+    .firstP{
+        margin-right: 0;
+    }
+
+    /* --------------------------- */
+    .etiquetaInicio,
+    .etiqueta {
+        border-right: 0;;
+    }
+
+    .etiqueta {
+        margin-top: 1rem;
+        flex: 1;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .etiquetaFoto::before {
+        padding-bottom: 60%;
+    }
+
+    /* --------------------------- */
+    .etiquetaTexto {
+        /* border: 1px solid blue; */
+        flex: 1;
+        background-color: var(--white);
+        padding: 1rem 1rem 2rem 1rem;
+    }
+
+    /* --------------------------- */
+    .seccionEtiquetas2 {
+        flex-flow: column nowrap;
+        margin-top: 0rem;
+    }
+
+    /*THRID SECTION*/
+    .InfoProvincesContainer {
+        
+        flex-flow: column nowrap;
+    
+    }
+
+    .secondP {
+        margin-top: 4rem;
+        
+    }
+    
+    .thirdP {
+        margin-top: 4rem;
+    }
+    
+    .thirdP img {
+        width: 200px;
+    }
+
+    /*FOURTH SECTION*/
+    
+    .InfoParksContainer {
+        
+        flex-flow: column nowrap;
+    
+    }
+
+    /*FIFTH SECTION*/
+    
+    .etiquetaFoto2::before {
+        padding-bottom: 60%;
+    }
+    
+    .etiquetaInicio .InicioFoto2::before {
+        padding-bottom: 60%;
+    }
+
+     /*SIXTH SECTION*/
+
+     .InfoCitiesContainer {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+     /*SEVENTH SECTION*/
+    .InfoCapitalContainer {
+        /* border: 1px solid blue; */
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    
+    .capital {
+        margin-top: 5rem;
+    }
+
+    /*EIGTH SECTION*/
+    
+    .NewsLetterContainer {
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .NewsLetterTittle {
+        text-align: center;
+        padding-left: 0;
+        margin-bottom: 40px;
+    }
+    
+    .NewsLetterTittle p {
+        margin: 0;
+    }
+    
+    .NewsLetterForm {
+        flex: 1;
+        width: 80%;
+        margin-left: 0rem;
+    }
+    
+    .NewsLetterForm .subscribe-form {
+        display: flex;
+    }
+    
+    .NewsLetterForm input[type=email] {
+        width: 100%;
+    } 
+    .input-btn {
+        width: 20%;
+    }
+
+    /*FOOTER*/ 
+    .row1 {
+        gap: 5rem;
+    }
+    
+    .row2 {
+        text-align: center;
+    }
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 780px) {
+    .menu-toggle {
+        display: flex;
+        flex-flow: column nowrap;
+        height: 20px;
+        justify-content: space-between;
+    }
+
+    section {
+        margin: 0 1rem 0 1rem;
+    }
+    .item1{
+        flex:1 1 100% ;
+    }
+    
+    .row1{
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+
+    /*THRID SECTION*/
+    .InfoProvincesContainer {
+        
+        flex-flow: column nowrap;
+    
+    }
+
+    .secondP {
+        margin-top: 4rem;
+        
+    }
+    
+    .thirdP {
+        margin-top: 4rem;
+    }
+    
+    .thirdP img {
+        width: 150px;
+    }
+
+    /*EIGTH SECTION*/
+    .NewsLetterContainer {
+        align-items: start;
+        justify-content: start;
+    }
+
+    .NewsLetterForm {
+        width: 100%;
+    }
+
+    /*FOOTER*/
+    .row1 {
+        flex-flow: row wrap;
+        align-items: center;
+    }
+    
+    
+    
+    .item2 {
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    
+    .item3 {
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 486px) {
+    .row1{
+        justify-content: flex-start;
+        gap: 4rem
+    }
+    
+    .item2, .item3{
+        margin-left: 25%;
+    }
+    .row1 ul {
+        margin: 0;
+        padding: 0;
+        margin-top: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    section {
+        margin: 0 1rem 0 1rem;
+        padding: 0;
+    }
+    
+    
+
+}
+
+@media screen and (max-width: 470px) {
+    .item1{
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .item1 .slogan p {
+        text-align: left;
+    }
+    .item2, .item3{
+        margin-left: 0;
+    }
+
+}
