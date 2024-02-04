@@ -33,7 +33,7 @@ This repository contains several projects, each focusing on specific aspects of 
 - **[/Restaurante](./Restaurante)**: Contains files related to Project 1.
 - **[/Canada](./Canada)**: Contains files related to Project 2.
 - **[/Arquitectura](./Arquitectura)**: Contains files related to Project 3.
-- - **[/Fotografia](./Fotografia)**: Contains files related to Project 4.
+- **[/Fotografia](./Fotografia)**: Contains files related to Project 4.
 
 ## Contact
 
