@@ -2,6 +2,8 @@
 
 Welcome to the repository housing various of my web application design projects from the course!
 
+- I am currently making a website in WordPress, you can visit it [here](https://nebula.caberbar.com)
+
 ## Overview
 
 This repository contains several projects, each focusing on specific aspects of web application design. Below is a brief description of each project:
