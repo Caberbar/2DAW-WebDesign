@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Quicksand:wght@600&family=Yeseva+One&display=swap');
+
+:root {
+    --orange-gradient : #ff710d;
+    --yellow: #ffb800;
+}
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+    margin : 0;
+    height: 100%;
+    font-family: Quicksand, sans-serif;
+    background: linear-gradient(320deg, var(--orange-gradient) 10%, var(--yellow) 90%);
+    color: white;
+    overflow: hidden;
+}
+ header {
+    height: 80px;
+
+    position: relative;
+
+    padding:0 50px;
+ }
+
+ nav {
+    position: absolute;
+    right: 50px;
+    top: 25px;
+    z-index: 9999;
+}
+
+ nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+ }
+
+ nav ul li {
+    display: inline-block;
+ }
+
+ nav ul li a {
+    padding: 5px 20px;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+
+ }
+
+ nav ul li a:hover{
+    background: white;
+    color: var(--orange-gradient);
+ }
+
+ .logo{
+    position: absolute;
+    top: 12px;
+ }
+
+ .wrapper{
+    width: 80%;
+    position: relative;
+    padding: 20px 150px;
+ }
+
+ .bottle-title{
+    font-family: "Croissant One";
+    color: white !important;
+    position: relative;
+    font-size: 10vw;
+    text-align: left;
+    line-height: 90%;
+ }
+
+ .bottle-title p {
+    font-family: Quicksand, sans-serif;
+    margin: 0;
+    font-size: 2rem;
+
+    position: absolute;
+    bottom: 2rem;
+    right: 350px;
+
+    width: 18rem;
+    line-height: 80%;
+}
+
+.bottle-container{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+
+    top: 0;
+    right: -400px;
+    transform: rotate(-20deg);
+    width: 800px;
+    
+}
