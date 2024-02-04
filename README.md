@@ -41,6 +41,6 @@ For any questions or comments, feel free to get in touch:
 
 - Carlos Bernal
 - <a href="mailto:carlos.bernal.barrionuevo@gmail.com">carlos.bernal.barrionuevo@gmail.com</a>
-- <a href="Caberbar.com">Caberbar.com</a>
+- [Caberbar.com](Caberbar.com)
 
 WI hope you find these web application design projects both useful and educational!
